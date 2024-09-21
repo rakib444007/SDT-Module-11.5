@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Meal-Menu{% endblock title %}
+{% block content %}
+<div class="container mt-5">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    {% for i in meals %}
+    <div >
+      <div class="card h-100 " >
+        <img src="{{i.strMealThumb}}" class="card-img-top" alt="{{i.strMeal}}">
+        <div class="card-body">
+          <h5 class="card-title">{{i.strMeal}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
